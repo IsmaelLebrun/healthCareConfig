@@ -10,3 +10,12 @@ eureka:
     service-url:
       defaultZone: http://localhost:8070/eureka
       #defaultZone: http://eureka:8070/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    status:
+      http-mapping:
+        UP: 200
