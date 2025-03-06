@@ -20,6 +20,8 @@ spring:
   sql:
     init:
       mode: always
+  profiles:
+    active: git
 management:
   endpoints:
     web:
