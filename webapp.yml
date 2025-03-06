@@ -11,8 +11,8 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      #defaultZone: http://localhost:8070/eureka
-      defaultZone: http://eurekaserver:8070/eureka
+      defaultZone: http://localhost:8070/eureka # version pour IDE
+      #defaultZone: http://eurekaserver:8070/eureka # version pour container
 management:
   endpoints:
     web:
