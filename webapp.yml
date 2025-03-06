@@ -3,6 +3,8 @@ server:
 spring:
   profiles:
     active: git
+  web:
+    resources: classpath:/static/
 eureka:
   instance:
     hostname: localhost
@@ -22,3 +24,8 @@ management:
     status:
       http-mapping:
         UP: 200
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
