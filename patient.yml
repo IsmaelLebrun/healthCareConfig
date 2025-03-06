@@ -9,7 +9,7 @@ eureka:
     fetch-registry: true
     service-url:
       #defaultZone: http://localhost:8070/eureka
-      defaultZone: http://localhost:8070/
+      defaultZone: http://eureka:8070/eureka
 spring:
   datasource:
     url: jdbc:mysql://localhost:3308/patientdb
