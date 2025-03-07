@@ -8,7 +8,7 @@ spring:
       static-locations: classpath:/static/
       templates-locations: classpath:/templates/
   datasource:
-    url: jdbc:mysql://localhost:3308/userdb
+    url: jdbc:mysql://localhost:3309/userdb
     username: root
     password: root
   jpa:
