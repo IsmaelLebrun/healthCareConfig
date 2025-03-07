@@ -4,7 +4,9 @@ spring:
   profiles:
     active: git
   web:
-    resources: classpath:/static/
+    resources:
+          static-locations: classpath:/static/
+          templates-locations: classpath:/templates/
 eureka:
   instance:
     hostname: localhost
