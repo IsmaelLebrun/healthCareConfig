@@ -1,12 +1,25 @@
 server:
   port: 8080
 spring:
+  application:
+    name: webapp
+  config:
+    import: optional:configserver:http://localhost:8888/
+  datasource:
+    url: jdbc:mysql://localhost:3309/userdb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  sql:
+    init:
+      mode: always
   profiles:
     active: git
   web:
     resources:
-          static-locations: classpath:/static/
-          templates-locations: classpath:/templates/
+      static-locations: classpath:/static/
+      templates-locations: classpath:/templates/
 eureka:
   instance:
     hostname: localhost
@@ -17,17 +30,21 @@ eureka:
     service-url:
       defaultZone: http://localhost:8070/eureka # version pour IDE
       #defaultZone: http://eurekaserver:8070/eureka # version pour container
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  health:
-    status:
-      http-mapping:
-        UP: 200
 logging:
   level:
     org:
       springframework:
         security: DEBUG
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
