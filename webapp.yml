@@ -5,8 +5,17 @@ spring:
     active: git
   web:
     resources:
-          static-locations: classpath:/static/
-          templates-locations: classpath:/templates/
+      static-locations: classpath:/static/
+      templates-locations: classpath:/templates/
+  datasource:
+    url: jdbc:mysql://localhost:3308/userdb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  sql:
+    init:
+      mode: always
 eureka:
   instance:
     hostname: localhost
