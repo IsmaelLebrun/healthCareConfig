@@ -12,8 +12,3 @@ management:
     status:
       http-mapping:
         UP: 200
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
