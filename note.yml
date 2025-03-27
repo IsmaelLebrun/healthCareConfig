@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: note
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eurekaserver:8070/eureka
+  data:
+    mongodb:
+      authentication-database: admin
+      username: root
+      password: root
+      database: notes
+      port: 27018
+      host: mongodb
