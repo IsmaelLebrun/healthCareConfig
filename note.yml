@@ -22,4 +22,4 @@ eureka:
       password: root
       database: notes
       port: 27018
-      host: mongodb
+      host: localhost
