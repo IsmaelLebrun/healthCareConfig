@@ -1,6 +1,8 @@
 spring:
   application:
     name: note
+  profiles:
+    active: git
 logging:
   level:
     org:
@@ -23,3 +25,12 @@ eureka:
       database: notes
       port: 27018
       host: localhost
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    status:
+      http-mapping:
+        UP: 200
